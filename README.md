@@ -1,1 +1,1 @@
-# sql-muder-mystery-challenge
+# sql-murder-mystery-challenge
