@@ -70,3 +70,18 @@ WHERE plate_number LIKE "%H42W%"
 183779	21	65	blue	blonde	female	H42W0X	Toyota	Prius
 423327	30	70	brown	brown	male	0H42W2	Chevrolet	Spark LS
 664760	21	71	black	black	male	4H42WR	Nissan	Altima
+
+---------------------
+
+SELECT *
+FROM drivers_license AS dl
+INNER JOIN person AS p ON dl.id = p.license_id
+INNER JOIN get_fit_now_member AS gf ON p.id = gf.person_id
+WHERE plate_number LIKE "%H42W%"
+
+id	age	height	eye_color	hair_color	gender	plate_number	car_make	car_model	id	name	license_id	address_number	address_street_name	ssn	id	person_id	name	membership_start_date	membership_status
+
+423327	30	70	brown	brown	male	0H42W2	Chevrolet	Spark LS	67318	Jeremy Bowers	423327	530	Washington Pl, Apt 3A	871539279	48Z55	67318	Jeremy Bowers	20160101	gold
+
+Jeremy Bowers! you do not have the say anything but it may harm your defence if you do not mention when questioned something which you later rely on in court!!!!
+
