@@ -1,3 +1,5 @@
+https://mystery.knightlab.com/
+
 A crime has taken place and the detective needs your help. The detective gave you the crime scene report, but you somehow lost it. You vaguely remember that the crime was a ​murder​ that occurred sometime on ​Jan.15, 2018​ and that it took place in ​SQL City​. Start by retrieving the corresponding crime scene report from the police department’s database.
 
 interview
@@ -20,9 +22,18 @@ WHERE date = 20180115 AND city = "SQL City" AND type = "murder"
 
 Security footage shows that there were 2 witnesses. The first witness lives at the last house on "Northwestern Dr". The second witness, named Annabel, lives somewhere on "Franklin Ave".
 
-<!-- SELECT sql 
-  FROM sqlite_master
- where name = 'crime_scene_report'
 
- CREATE TABLE crime_scene_report ( date integer, type text, description text, city text ) -->
- 
+SELECT * 
+FROM person
+WHERE address_street_name = "Northwestern Dr" 
+ORDER BY address_number DESC 
+LIMIT 1
+
+first witness = 14887	Morty Schapiro	118009	4919	Northwestern Dr	111564949
+
+SELECT * 
+FROM person
+WHERE address_street_name = "Franklin Ave" 
+AND name LIKE "%Annabel%"
+
+second witness = 16371	Annabel Miller	490173	103	Franklin Ave	318771143
