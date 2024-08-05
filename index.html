@@ -16,24 +16,24 @@ crime_scene_report
 
 date	type	description	city -->
 
-SELECT * 
+SELECT *
 FROM crime_scene_report
 WHERE date = 20180115 AND city = "SQL City" AND type = "murder"
 
 Security footage shows that there were 2 witnesses. The first witness lives at the last house on "Northwestern Dr". The second witness, named Annabel, lives somewhere on "Franklin Ave".
 
 
-SELECT * 
+SELECT *
 FROM person
-WHERE address_street_name = "Northwestern Dr" 
-ORDER BY address_number DESC 
+WHERE address_street_name = "Northwestern Dr"
+ORDER BY address_number DESC
 LIMIT 1
 
 first witness = 14887	Morty Schapiro	118009	4919	Northwestern Dr	111564949
 
-SELECT * 
+SELECT *
 FROM person
-WHERE address_street_name = "Franklin Ave" 
+WHERE address_street_name = "Franklin Ave"
 AND name LIKE "%Annabel%"
 
 second witness = 16371	Annabel Miller	490173	103	Franklin Ave	318771143
